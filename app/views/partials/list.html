@@ -1,0 +1,30 @@
+<div ng-include="'partials/navbar'"></div>
+
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Invitee name</th>
+        <th>Group size</th>
+        <th>Confirmation date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="invite in invites">
+        <td>{{invite.name}}</td>
+        <td>{{invite.number}}</td>
+        <td>{{invite.date | date:'medium'}}</td>
+    </tr>
+    </tbody>
+</table>
+<div class="panel panel-default">
+    <div class="panel-body">
+        We got <span class="badge">{{invites.length}}</span>  confirmations!
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <p>♥</p>
+</div>
