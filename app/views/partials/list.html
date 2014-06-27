@@ -6,6 +6,7 @@
     <tr>
         <th>Invitee name</th>
         <th>Group size</th>
+        <th>Phone number</th>
         <th>Confirmation date</th>
     </tr>
     </thead>
@@ -13,6 +14,7 @@
     <tr ng-repeat="invite in invites">
         <td>{{invite.name}}</td>
         <td>{{invite.number}}</td>
+        <td>{{invite.phone}}</td>
         <td>{{invite.date | date:'medium'}}</td>
     </tr>
     </tbody>
