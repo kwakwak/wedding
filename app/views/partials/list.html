@@ -8,6 +8,7 @@
         <th>Group size</th>
         <th>Phone number</th>
         <th>Confirmation date</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
         <td>{{invite.number}}</td>
         <td>{{invite.phone}}</td>
         <td>{{invite.date | date:'medium'}}</td>
+        <td><span class="glyphicon glyphicon-trash" ng-click="remove(invite)"></span></td>
     </tr>
     </tbody>
 </table>
