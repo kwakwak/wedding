@@ -10,11 +10,11 @@ angular.module('weddingApp', [
     $routeProvider
       .when('/list', {
         templateUrl: 'partials/list',
-        controller: 'MainCtrl'
+        controller: 'ListCtrl'
       })
       .when('/', {
         templateUrl: 'partials/form',
-        controller: 'MainCtrl'
+        controller: 'FormCtrl'
       })
       .otherwise({
         redirectTo: '/'
