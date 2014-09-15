@@ -1,0 +1,99 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/**
+ * App-wide Styles
+ */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-image: url('/assets/images/background.jpg');
+  background-size: cover;
+  background-position: 0px 20%;
+  background-repeat: no-repeat;
+}
+
+body, .container{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.black-box{
+  background-color: black;
+
+  opacity: 0.9;
+  color: white;
+  padding: 40px;
+  margin-top: 20px;
+  @include border-radius(20px);
+
+  h1{
+    font-family: 'Courgette', cursive;
+    margin-top: 10px;
+    text-align: center
+  }
+
+  form{
+    width: 80%;
+    margin: 0px auto;
+    border-top: dashed 3px;
+    padding-top: 30px;
+  }
+  .btn{
+    font-weight: bold;
+  }
+  .badge{
+    color: white;
+    font-size: 22px;
+    background-color: #000000;
+  }
+  .table{
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+  }
+  .alert-success {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #000000;
+    font-size: 16px;
+  }
+}
+
+
+
+// Component styles are injected through grunt
+// injector
+@import 'list/list.scss';
+@import 'main/main.scss';
+@import 'modal/modal.scss';
+// endinjector

@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="black-box col-lg-4 col-lg-offset-4">
+        <table class="table">
+
+            <thead>
+            <tr>
+                <th>Invitee name</th>
+                <th>Group size</th>
+                <th>Phone number</th>
+                <th>Confirmation date</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="invite in invites">
+                <td>{{invite.name}}</td>
+                <td>{{invite.number}}</td>
+                <td>{{invite.phone}}</td>
+                <td>{{invite.date | date:'medium'}}</td>
+                <td><span class="glyphicon glyphicon-trash" ng-click="remove(invite)"></span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        Total <span class="badge"> {{group_size_sum}} </span> people!
+
+    </div>
+</div>
