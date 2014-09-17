@@ -2,5 +2,5 @@
 
 angular.module('weddingApp')
     .factory('resource',['$resource',function($resource){
-        return $resource('/api/invites/:id');
+        return $resource('/api/invites/:id/:password');
     }]);

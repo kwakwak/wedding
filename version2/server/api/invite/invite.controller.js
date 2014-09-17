@@ -44,14 +44,20 @@ exports.update = function(req, res) {
 
 // Deletes a invite from the DB.
 exports.destroy = function(req, res) {
-  Invite.findById(req.params.id, function (err, invite) {
-    if(err) { return handleError(res, err); }
-    if(!invite) { return res.send(404); }
-    invite.remove(function(err) {
-      if(err) { return handleError(res, err); }
-      return res.send(204);
-    });
-  });
+    if(req.params.password==='lupilup'){
+        Invite.findById(req.params.id, function (err, invite) {
+            if(err) { return handleError(res, err); }
+            if(!invite) { return res.send(404); }
+            invite.remove(function(err) {
+                if(err) { return handleError(res, err); }
+                return res.send(204);
+            });
+        });
+    } else {
+        return res.send(401);
+    }
+
+
 };
 
 function handleError(res, err) {
