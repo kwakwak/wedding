@@ -3,59 +3,60 @@
 
         <div class="alert alert-success" ng-show="status.success">You successfully confirmed your invitation. See you there!
         </div>
-        <h1> Please confirm your arrival </h1>
+        <div ng-hide="status.success">
+            <h1> Please confirm your arrival </h1>
+            <form class="form-horizontal" role="form" name="form.confirm" >
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-3 control-label">Name</label>
 
-        <form class="form-horizontal" role="form" name="form.confirm">
-            <div class="form-group">
-                <label for="inputName" class="col-sm-3 control-label">Name</label>
-
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputName" placeholder="Full name"
-                           ng-model="inviteForm.name"
-                           required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputPhone" class="col-sm-3 control-label">Phone</label>
-
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone number"
-                           ng-model="inviteForm.phone">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label">Group size</label>
-
-                <div class="col-sm-8">
-                    <div class="btn-group group-size">
-                        <button type="button" class="btn btn-default" ng-click="inviteForm.number=1"
-                                ng-class="{active: inviteForm.number==1}">1
-                        </button>
-                        <button type="button" class="btn btn-default" ng-click="inviteForm.number=2"
-                                ng-class="{active: inviteForm.number==2}">2
-                        </button>
-                        <button type="button" class="btn btn-default" ng-click="inviteForm.number=3"
-                                ng-class="{active: inviteForm.number==3}">3
-                        </button>
-                        <button type="button" class="btn btn-default" ng-click="inviteForm.number=4"
-                                ng-class="{active: inviteForm.number==4}">4
-                        </button>
-                        <button type="button" class="btn btn-default" ng-click="inviteForm.number=5"
-                                ng-class="{active: inviteForm.number==5}">5
-                        </button>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputName" placeholder="Full name"
+                               ng-model="inviteForm.name"
+                               required>
                     </div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="inputPhone" class="col-sm-3 control-label">Phone</label>
 
-            <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-8">
-                    <button type="submit" ng-click="create(inviteForm)"
-                            data-loading-text="Saving..." class="btn btn-default btn-lg btn-block"
-                            btn-loading="status.saving" ng-disabled="form.confirm.$invalid || !inviteForm.number">
-                        Confirm <i class="fa fa-heart"></i></button>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone number"
+                               ng-model="inviteForm.phone">
+                    </div>
                 </div>
-            </div>
-        </form>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Group size</label>
+
+                    <div class="col-sm-8">
+                        <div class="btn-group group-size">
+                            <button type="button" class="btn btn-default" ng-click="inviteForm.number=1"
+                                    ng-class="{active: inviteForm.number==1}">1
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="inviteForm.number=2"
+                                    ng-class="{active: inviteForm.number==2}">2
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="inviteForm.number=3"
+                                    ng-class="{active: inviteForm.number==3}">3
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="inviteForm.number=4"
+                                    ng-class="{active: inviteForm.number==4}">4
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="inviteForm.number=5"
+                                    ng-class="{active: inviteForm.number==5}">5
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-8">
+                        <button type="submit" ng-click="create(inviteForm)"
+                                data-loading-text="Saving..." class="btn btn-default btn-lg btn-block"
+                                btn-loading="status.saving" ng-disabled="form.confirm.$invalid || !inviteForm.number">
+                            Confirm <i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
 
     </div>
