@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Group size</label>
 
-                    <div class="col-sm-8">
+                    <div class="col-sm-8" tooltip="מספר משתתפים" tooltip-placement="right">
                         <div class="btn-group group-size">
                             <button type="button" class="btn btn-default" ng-click="inviteForm.number=1"
                                     ng-class="{active: inviteForm.number==1}">1
@@ -41,7 +41,7 @@
                                     ng-class="{active: inviteForm.number==4}">4
                             </button>
                             <button type="button" class="btn btn-default" ng-click="inviteForm.number=5"
-                                    ng-class="{active: inviteForm.number==5}">5
+                                    ng-class="{active: inviteForm.number==5}" >5
                             </button>
                         </div>
                     </div>
@@ -57,8 +57,12 @@
                 </div>
             </form>
         </div>
+    </div>
 
-
+    <div class="black-box col-lg-4 col-lg-offset-4">
+        <div class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3386.284700468083!2d34.827082!3d31.926027!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf96bebe87b3bdb!2z15fXldeV16og15DXnNeg15HXmQ!5e0!3m2!1siw!2sil!4v1411844063409" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        </div>
     </div>
 
 </div>
