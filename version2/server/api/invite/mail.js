@@ -29,7 +29,7 @@ exports.send = function(req){
 //send mail with defined transport object
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
-            console.log(error);
+            console.log(error +' user: '+ process.env.GMAIL_USER + ' pass: ' + process.env.GMAIL_PASS);
         }else{
             console.log('Message sent: ' + info.response);
         }
